@@ -1,7 +1,8 @@
-package org.springframework.social.dropbox.connect;
+package org.springframework.social.trello.connect;
 
 import org.springframework.social.connect.support.OAuth1ConnectionFactory;
-import org.springframework.social.dropbox.api.Dropbox;
+
+import com.julienvey.trello.Trello;
 
 /**
  * Dropbox Connection Factory
@@ -9,7 +10,7 @@ import org.springframework.social.dropbox.api.Dropbox;
  * @author Bryce Fischer
  * @author Robert Drysdale
  */
-public class DropboxConnectionFactory extends OAuth1ConnectionFactory<Dropbox> {
+public class TrelloConnectionFactory extends OAuth1ConnectionFactory<Trello> {
 	
 	/**
 	 * Dropbox Connection Factory
@@ -22,7 +23,7 @@ public class DropboxConnectionFactory extends OAuth1ConnectionFactory<Dropbox> {
 	 * @param appSecret Registered
 	 * @param appFolder Whether to use sandboxed app folder or access whole of Dropbox
 	 */
-    public DropboxConnectionFactory(String appKey, String appSecret, boolean appFolder) {
-        super("dropbox", new DropboxServiceProvider(appKey, appSecret, appFolder), new DropboxAdapter());
+    public TrelloConnectionFactory(String appKey, String appSecret) {
+        super("trello", new TrelloServiceProvider(appKey, appSecret), new TrelloAdapter());
     }
 }
