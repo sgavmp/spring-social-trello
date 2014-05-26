@@ -39,7 +39,7 @@ public class TrelloAdapter implements ApiAdapter<Trello> {
     }
 
     @Override
-    public void updateStatus(Trello dropboxApi, String s) {
+    public void updateStatus(Trello trello, String s) {
         // Not Supported
     }
 

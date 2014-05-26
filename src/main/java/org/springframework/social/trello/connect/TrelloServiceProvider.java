@@ -14,10 +14,11 @@ import com.julienvey.trello.impl.TrelloImpl;
 public class TrelloServiceProvider extends AbstractOAuth1ServiceProvider<Trello> {
 	
     public TrelloServiceProvider(String consumerKey, String consumerSecret) {
-        super(consumerKey,  consumerSecret, new OAuth1Template(consumerKey, consumerSecret,
+        super(consumerKey,  consumerSecret, new TrelloOAuth1Template(consumerKey, consumerSecret,
                 "https://trello.com/1/OAuthGetRequestToken",
                 "https://trello.com/1/OAuthAuthorizeToken",
                 "https://trello.com/1/OAuthGetAccessToken",
+                "expiration=never",
                 OAuth1Version.CORE_10_REVISION_A));
     }
 
