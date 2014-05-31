@@ -9,10 +9,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import com.julienvey.trello.Trello;
 import com.julienvey.trello.domain.Member;
 
-/**
- * @author Bryce Fischer
- * @author Robert Drysdale
- */
+
 public class TrelloAdapter implements ApiAdapter<Trello> {
     @Override
     public boolean test(Trello trello) {
